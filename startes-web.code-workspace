@@ -1,9 +1,9 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"uri": "vscode-remote://wsl+ubuntu/mnt/z/startes-web"
 		}
 	],
 	"remoteAuthority": "wsl+Ubuntu",
-	"settings": {},
+	"settings": {}
 }
