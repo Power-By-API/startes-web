@@ -1,44 +1,29 @@
 ---
-import Firstscene from '../components/Firstscene.astro';
-import Header from '../components/Header.astro';
-import Carrusel from '../components/Carrusel.astro';
-import '../styles/global.css';
+import Firstscene from "../components/Firstscene.astro";
+import Carrusel from "../components/Carrusel.astro";
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Inicio Start</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
-    <style>
-      .opacity-0 {
-        opacity: 0.7;
-      }
-      .opacity-100 {
-        opacity: 1;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- TODO: añadir etiquetas SEO -->
   </head>
   <body class="font-sans">
-    <Header />
-    <Firstscene />
-    <Carrusel />
-    <script>
-      window.addEventListener('scroll', function() {
-        const header = document.getElementById('header');
-        if (header) {
-          if (window.scrollY > 50) {
-            header.classList.remove('opacity-100');
-            header.classList.add('opacity-0');
-          } else {
-            header.classList.remove('opacity-0');
-            header.classList.add('opacity-100');
-          }
-        }
-      });
-    </script>
+    <Layout title="Startes">
+      <Hero />
+      <!-- <Firstscene /> -->
+      <Carrusel />
+    </Layout>
   </body>
 </html>
