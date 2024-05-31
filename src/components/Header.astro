@@ -1,11 +1,9 @@
 ---
-
+import ThemeIcon from "./ThemeIcon.astro";
 ---
 
-<!-- TODO: Cambiar urls -->
-<!-- TODO: Tener los colores en variables comunes para toda la web, relacionado con modo oscuro -->
-<!-- TODO: No me convence el header. Sobretodo con la combinacion con el Hero. Tal vez haya que cambiar el fondo para que no sea plano y sea un degradado. Se puede quitar la linea verde de separación -->
-<header class="bg-[#3C3C3B] border-b-2 border-[#95C11F]">
+<!-- TODO: Cambiar urls --><!-- TODO: No me convence el header. Sobretodo con la combinacion con el Hero. Tal vez haya que cambiar el fondo para que no sea plano y sea un degradado. Se puede quitar la linea verde de separación -->
+<header class="border-b-2 border-[var(--primary-color)]">
   <nav
     class="items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 sm:flex sm:space-x-6"
   >
@@ -24,15 +22,18 @@
     >
       <!-- TODO: Cambiar por map de componenentes -->
       <li>
-        <a href="" class="flex items-center text-gray-200">
+        <a href="" class="flex items-center text-[--text-color-primary]">
           Calculadora solar
         </a>
       </li>
       <li>
-        <a href="" class="flex items-center text-gray-200"> Nosotros </a>
+        <a href="" class="flex items-center text-[--text-color-primary]"> Nosotros </a>
       </li>
       <li>
-        <a href="" class="flex items-center text-gray-200"> Contacto </a>
+        <a href=""  class="flex items-center text-[--text-color-primary]"> Contacto </a>
+      </li>
+      <li>
+        <ThemeIcon />
       </li>
     </ul>
   </nav>

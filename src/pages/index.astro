@@ -1,29 +1,12 @@
 ---
-import Firstscene from "../components/Firstscene.astro";
 import Carrusel from "../components/Carrusel.astro";
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 ---
 
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Inicio Start</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- TODO: añadir etiquetas SEO -->
-  </head>
-  <body class="font-sans">
-    <Layout title="Startes">
-      <Hero />
-      <!-- <Firstscene /> -->
-      <Carrusel />
-    </Layout>
-  </body>
-</html>
+<Layout title="Startes">
+  <Hero />
+  <!-- <Firstscene /> -->
+  <Carrusel />
+</Layout>

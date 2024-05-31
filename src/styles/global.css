@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* This indicates that it will be executed before any other CSS rules */
+
+/* TODO: (NO URGENTE) Añadir animaciones para el cambio de temas */
+@layer base {
+
+    /* To put global variables you have to do it in tailwind.config.mjs */
+
+    /* TODO: seleccionar los colores difinitos. Que tengan buen contraste el primary y el oscuro */
+
+    /* Styles vars for light theme */
+    :root[data-theme="light"] {
+        --primary-color: #3b4b0f;
+        --secondary-color: #a1ce25;
+        --background-color: #e4eee7;
+        --text-color-primary: #191c1c;
+        --text-color-secondary: #666565;
+
+    }
+
+    /* Styles vars for dark theme */
+    :root[data-theme="dark"] {
+        --primary-color: #95C11F;
+        --secondary-color: #41540D;
+        --background-color: #191c1c;
+        --text-color-primary: #fafdfb;
+        --text-color-secondary: #707070;
+
+
+    }
+
+    body {
+        background-color: var(--background-color);
+    }
+
+}
