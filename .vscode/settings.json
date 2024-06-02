@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "Design Styles",
-        "Project Configuration"
+        "Project Configuration",
+        "Images"
     ]
 }
