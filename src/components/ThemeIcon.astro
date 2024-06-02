@@ -2,6 +2,7 @@
 
 ---
 
+<!-- TODO: Añadir animación de cambio -->
 <button id="themeToggle">
   <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path
@@ -16,22 +17,25 @@
     ></path>
   </svg>
 </button>
-
-<style>
+<style is:inline>
   #themeToggle {
     border: 0;
     background: none;
   }
-  .sun {
+
+  :root[data-theme="light"] .sun {
     fill: var(--text-color-primary);
   }
-  .moon {
-    fill: transparent;
+
+  :root[data-theme="light"] .moon {
+    fill: none;
   }
-  .sun[data-theme="dark"] {
-    fill: transparent;
+
+  :root[data-theme="dark"] .sun {
+    fill: none;
   }
-  .moon[data-theme="dark"] {
+
+  :root[data-theme="dark"] .moon {
     fill: var(--text-color-primary);
   }
 </style>

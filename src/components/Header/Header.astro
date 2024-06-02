@@ -1,0 +1,28 @@
+---
+import ThemeIcon from "../ThemeIcon.astro";
+import HeaderListPages from "./HeaderListPages.astro";
+import pages from "../../utils/pages.json";
+---
+
+<!-- TODO: Cambiar urls --><!-- TODO: No me convence el header. Sobretodo con la combinacion con el Hero. Tal vez haya que cambiar el fondo para que no sea plano y sea un degradado. Se puede quitar la linea verde de separación -->
+<header id="header" class="px-10 fixed w-full z-10 bg-[--background-color]">
+  <div class="border-b border-[--text-color-secondary]">
+    <nav
+      class="items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 sm:flex sm:space-x-6"
+    >
+      <a href="">
+        <!-- TODO: cambiar imagen por logo nuevo (hay que hacerlo) -->
+        <!-- TODO: Responsive del icono (hacer más pequeño o a la izq del texto) -->
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/9908/9908191.png"
+          width="120"
+          height="50"
+          alt="Startes logo"
+        />
+      </a>
+
+      <HeaderListPages pages={pages} />
+    </nav>
+    <!-- </div> -->
+  </div>
+</header>

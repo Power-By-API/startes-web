@@ -1,0 +1,43 @@
+---
+const darkMode =
+  typeof document !== "undefined" &&
+  document.documentElement.getAttribute("data-theme") === "dark";
+const imageSrc = darkMode ? "/images/hero_dark.svg" : "/images/hero_light.svg";
+---
+
+<img
+  id="theme-image"
+  src={imageSrc}
+  class="h-full filter- opacity-50 sm:opacity-100"
+/>
+
+<!-- Every time you change the primary colors, you have to change this image -->
+<!-- Detect change mode -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const themeImage = document.getElementById(
+      "theme-image"
+    ) as HTMLImageElement | null;
+
+    const updateImageSrc = () => {
+      const isDarkMode =
+        document.documentElement.getAttribute("data-theme") === "dark";
+
+      if (themeImage) {
+        themeImage.src = isDarkMode
+          ? "/images/hero_dark.svg"
+          : "/images/hero_light.svg";
+      }
+    };
+
+    // Inicializa la imagen al cargar la página
+    updateImageSrc();
+
+    // Observa los cambios en el atributo data-theme del elemento html
+    const observer = new MutationObserver(updateImageSrc);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  });
+</script>

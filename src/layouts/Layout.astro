@@ -1,11 +1,6 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import ThemeIcon from "../components/ThemeIcon.astro";
-
-interface Props {
-  title: string;
-}
+import Header from "../components/Header/Header.astro";
+import Footer from "../components/Footer/Footer.astro";
 
 const { title } = Astro.props;
 ---
@@ -30,7 +25,15 @@ const { title } = Astro.props;
   </head>
   <body>
     <Header />
-    <slot />
+    <div id="main-container">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>
+
+<script>
+  // Add a paddin top in <slot> depending on the height of the <Header />, to prevent the <Header /> from covering it
+  import "../components/Header/handleWindowResize";
+  
+</script>

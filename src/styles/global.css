@@ -16,17 +16,17 @@
         --primary-color: #3b4b0f;
         --secondary-color: #a1ce25;
         --background-color: #e4eee7;
-        --text-color-primary: #191c1c;
-        --text-color-secondary: #666565;
+        --text-color-primary: #314400;
+        --text-color-secondary: #757575;
 
     }
 
     /* Styles vars for dark theme */
     :root[data-theme="dark"] {
-        --primary-color: #95C11F;
-        --secondary-color: #41540D;
+        --primary-color: #acdd27;
+        --secondary-color: #3f4e15;
         --background-color: #191c1c;
-        --text-color-primary: #fafdfb;
+        --text-color-primary: #d5f0dd;
         --text-color-secondary: #707070;
 
 
