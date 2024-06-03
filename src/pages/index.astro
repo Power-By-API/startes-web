@@ -1,13 +1,16 @@
 ---
-import Carrusel from "../components/Carrusel.astro";
-import "../styles/global.css";
+import Carrusel from "../components/Carrusel/Carrusel.astro";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero/Hero.astro";
+import IndexContent from "../components/IndexContent/IndexContent.astro";
 ---
 
 <!-- TODO: Cambiar titulo y descripción por SEO -->
-<Layout title="Startes" description="Descubre nuestro equipo de instalación de placas solares">
+<Layout
+  title="Startes"
+  description="Descubre nuestro equipo de instalación de placas solares"
+>
   <Hero />
-  <!-- <Firstscene /> -->
+  <IndexContent />
   <Carrusel />
 </Layout>

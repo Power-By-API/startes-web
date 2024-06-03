@@ -3,24 +3,15 @@ import ButtonsList from "../Buttons/ButtonsList.astro";
 import HeroImage from "./HeroImage.astro";
 import PrimaryButton from "../Buttons/PrimaryButton.astro";
 import SecondaryButton from "../Buttons/SecondaryButton.astro";
+import Section from "../Section/Section.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <!-- Cambiar textos!!!!! --><!-- TODO: Cambiar links -->
-<section
-  class="relative
-  items-center
-   mx-auto
-     max-w-screen-xl
-  
-  pb-12 px-4 pt-10
-  lg:flex
-  md:px-8
-  h-[75vh]
-  min-h-[600px]
-  max-h-[700px]"
-  
->
-  <div class="w-full sm:w-1/2 space-y-4 p-6 xl:p-0 text-left">
+<Section id="hero">
+  <div
+    class="flex flex-col items-start gap-7 justify-center md:px-8 h-[75vh] min-h-[600px] max-h-[700px] w-full sm:w-1/2 space-y-4 p-6 xl:p-0 text-left"
+  >
     <!-- Mejorar estilo del h1 -->
     <h1 class="text-[--text-color-primary] font-bold text-4xl xl:text-7xl">
       Deja que
@@ -38,22 +29,31 @@ import SecondaryButton from "../Buttons/SecondaryButton.astro";
       solares en España y ahorra en tus facturas mientras cuidas el planeta.
     </p>
     <ButtonsList>
-      <SecondaryButton>
-        <a href=""> Calcula el precio </a>
-      </SecondaryButton>
-      <PrimaryButton>
-        <a href="">
+      <a href="">
+        <SecondaryButton>Calcula el precio</SecondaryButton>
+      </a>
+      <a href="">
+        <PrimaryButton>
           <!-- TODO: Cambiar tipografía -->
           Contáctanos
-        </a>
-      </PrimaryButton>
+        </PrimaryButton>
+      </a>
     </ButtonsList>
+    <div class="w-min">
+      <a href="#content">
+        <div
+          class="text-3xl p-3 font-bold text-[--background-color] rounded-full bg-[--text-color-primary]"
+        >
+          <Icon name="mdi:arrow-down" />
+        </div>
+      </a>
+    </div>
   </div>
   <div
     class="absolute -z-10 top-1/2 right-0 transform -translate-y-1/2 h-full p-10"
   >
     <HeroImage />
   </div>
-</section>
 
-<!-- TODO: O hacer el hero menos alto, o poner una animacion de una flechita para abajo, para indicar que se puede ir apar abajo -->
+  <!-- TODO: O hacer el hero menos alto, o poner una animacion de una flechita para abajo, para indicar que se puede ir apar abajo -->
+</Section>

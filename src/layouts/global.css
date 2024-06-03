@@ -13,10 +13,10 @@
 
     /* Styles vars for light theme */
     :root[data-theme="light"] {
-        --primary-color: #3b4b0f;
-        --secondary-color: #a1ce25;
+        --primary-color: #455e00;
+        --secondary-color: #b0e02b;
         --background-color: #e4eee7;
-        --text-color-primary: #314400;
+        --text-color-primary: #172000;
         --text-color-secondary: #757575;
 
     }

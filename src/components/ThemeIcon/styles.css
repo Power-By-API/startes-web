@@ -1,0 +1,20 @@
+#themeToggle {
+    border: 0;
+    background: none;
+}
+
+:root[data-theme="light"] .sun {
+    fill: var(--text-color-primary);
+}
+
+:root[data-theme="light"] .moon {
+    fill: none;
+}
+
+:root[data-theme="dark"] .sun {
+    fill: none;
+}
+
+:root[data-theme="dark"] .moon {
+    fill: var(--text-color-primary);
+}

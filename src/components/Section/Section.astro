@@ -1,0 +1,10 @@
+---
+const { id } = Astro.props;
+---
+
+<section
+  id={id}
+  class="relative text-[--text-color-primary] mx-auto max-w-screen-xl pb-12 px-4 pt-10"
+>
+  <slot />
+</section>
