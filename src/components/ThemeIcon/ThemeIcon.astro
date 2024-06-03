@@ -40,35 +40,6 @@
   }
 </style>
 
-<script is:inline>
-  const theme = (() => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-      return localStorage.getItem("theme");
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "light";
-  })();
-
-  if (theme === "light") {
-    document.documentElement.setAttribute("data-theme", "light");
-  } else {
-    document.documentElement.setAttribute("data-theme", "dark");
-  }
-
-  window.localStorage.setItem("theme", theme);
-
-  const handleToggleClick = () => {
-    const element = document.documentElement;
-    const currentTheme = element.getAttribute("data-theme");
-    const newTheme = currentTheme === "light" ? "dark" : "light";
-
-    element.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-  };
-
-  document
-    .getElementById("themeToggle")
-    .addEventListener("click", handleToggleClick);
+<script>
+ import "./changeTheme"
 </script>

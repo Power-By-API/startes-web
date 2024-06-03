@@ -6,3 +6,9 @@ export interface Page{
 export interface PageList {
     pages: Page[];
 }
+
+export interface PageMetadata{
+    title: string,
+    description: string,
+    
+}

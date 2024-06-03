@@ -1,4 +1,14 @@
-import getHeaderHeight from "./getHeaderHeight";
+
+const getHeaderHeight = (): number => {
+    const mainHeader = document.getElementById("header");
+
+
+    if (mainHeader) {
+        return mainHeader.offsetHeight;
+    } else {
+        return 100; // Default value if any of the elements are not found
+    }
+};
 
 // Function to handle window resize event
 const handleWindowResize = () => {
@@ -21,3 +31,8 @@ handleWindowResize()
 window.addEventListener("resize", handleWindowResize);
 
 export default handleWindowResize
+
+
+
+
+
