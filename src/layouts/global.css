@@ -32,7 +32,58 @@
 
     }
 
-    body {
+    * {
+        /* Add a text color, background color and border color transition */
+        /* transition:  */
+        /* color 1s 0.1s ease-in-out, */
+        /* background-color 1s 0.3s ease-in-out, */
+        /* border-color 1s 0.3s ease-in-out; */
+
+    }
+
+    /* This is the default font for the whole project */
+
+
+    /* TODO: (NO URGENTE) Add a font for the whole project */
+
+
+    /* This is the default font size for the whole project */
+    :root {
+        font-size: 16px;
+        /* TODO: (NO URGENTE) Add a font size for the whole project */
+    }
+
+    /* This is the default line height for the whole project */
+    :root {
+        line-height: 1.5;
+        /* TODO: (NO URGENTE) Add a line height for the whole project */
+    }
+
+    /* This is the default letter spacing for the whole project */
+    :root {
+        letter-spacing: 0.01em;
+        /* TODO: (NO URGENTE) Add a letter spacing for the whole project */
+    }
+
+    /* This is the default text color for the whole project */
+    :root {
+        color: var(--text-color-primary);
+        /* TODO: (NO URGENTE) Add a text color for the whole project */
+    }
+
+    /* This is the default background color for the whole project */
+    :root {
+        background-color: var(--background-color);
+        /* TODO: (NO URGENTE) Add a background color for the whole project */
+    }
+
+    /* This is the default border color for the whole project */
+    :root {
+        border-color: var(--text-color-secondary);
+        /* TODO: (NO URGENTE) Add a border color for the whole project */
+    }
+
+    :root {
         background-color: var(--background-color);
     }
 
