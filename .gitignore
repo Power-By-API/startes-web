@@ -24,3 +24,4 @@ pnpm-debug.log*
 .idea/
 *.code-workspace
 startes-web.code-workspace
+/.pnpm-store
